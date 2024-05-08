@@ -104,18 +104,6 @@
           </execution>
         </executions>
       </plugin>
-      <!-- 确保测试 JARs 被生成 -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <classifier>tests</classifier>
-          <includes>
-            <include>**/*.class</include>
-          </includes>
-        </configuration>
-      </plugin>
-
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -133,6 +121,12 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>${org.apache.maven.plugins.maven-jar-plugin.version}</version>
+        <configuration>
+          <classifier>tests</classifier>
+          <includes>
+            <include>**/*.class</include>
+          </includes>
+        </configuration>
       </plugin>
 
       <plugin>
