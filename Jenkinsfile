@@ -47,11 +47,5 @@ pipeline {
             archiveArtifacts artifacts: '**/target/surefire-reports/**', fingerprint: true
             archiveArtifacts artifacts: '**/target/*.javadoc.jar', fingerprint: true
         }
-        success {
-            // actions to perform on success
-        }
-        failure {
-            // actions to perform on failure
-        }
     }
 }
